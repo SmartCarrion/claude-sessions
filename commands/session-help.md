@@ -6,12 +6,20 @@ The session system helps document development work for future reference.
 
 ### Available Commands:
 
+**Session Management:**
 - `/project:session-start [name]` - Start a new session with optional name
 - `/project:session-resume` - Resume an existing unfinished session
 - `/project:session-update [notes]` - Add notes to current session  
 - `/project:session-end` - End session with comprehensive summary
 - `/project:session-list` - List all session files
 - `/project:session-current` - Show current session status
+
+**Git Integration:**
+- `/project:git-branch [name]` - Create git branch with smart naming
+- `/project:git-pr [title]` - Create pull request with session context
+- `/project:git-review [pr-number]` - Ultrathink PR review
+
+**Help & Issues:**
 - `/project:session-help` - Show this help
 - `/project:issue-help` - Help for GitHub issue management
 
@@ -45,6 +53,19 @@ The session system helps document development work for future reference.
 # Shows numbered list of unfinished sessions
 # Select session number to resume
 /project:session-update Continued work on authentication
+/project:session-end
+```
+
+**Complete Development Workflow:**
+```
+/project:session-start fix-auth-timeout-issue-42
+/project:git-branch
+# Creates branch: fix/issue-42-auth-timeout
+/project:session-update Fixed middleware timeout logic
+/project:git-pr
+# Creates PR with session context and changes
+/project:git-review
+# Ultrathink review with comprehensive analysis
 /project:session-end
 ```
 

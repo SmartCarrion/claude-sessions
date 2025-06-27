@@ -6,10 +6,18 @@ The issue system helps create detailed GitHub issues and implementation plans fr
 
 ### Available Commands:
 
+**Issue Management:**
 - `/project:issue-bug [description]` - Create detailed bug report with analysis
 - `/project:issue-feature [description]` - Create comprehensive feature request  
 - `/project:issue-list [options]` - List and select GitHub issues to work on
 - `/project:issue-plan <issue-id>` - Create implementation plan with ultrathink analysis
+
+**Git Workflow:**
+- `/project:git-branch [name]` - Create git branch with smart naming from session context
+- `/project:git-pr [title]` - Create pull request with AI-generated description
+- `/project:git-review [pr-number]` - Ultrathink PR review before merging
+
+**Help:**
 - `/project:issue-help` - Show this help
 
 ### How It Works:
@@ -74,6 +82,13 @@ All issue commands offer to start development sessions:
 /project:issue-plan 42
 # Review comprehensive implementation plan
 /project:session-start fix-logout-bug-issue-42
+/project:git-branch
+# Creates branch: fix/issue-42-logout-bug
+# ... code the fix ...
+/project:git-pr
+# Creates PR with detailed description
+/project:git-review
+# Ultrathink review before merging
 ```
 
 **Feature Workflow:**
@@ -85,6 +100,11 @@ All issue commands offer to start development sessions:
 /project:issue-plan 43
 # Approve TDD implementation plan
 /project:session-start dark-mode-feature-issue-43
+/project:git-branch feature/dark-mode
+# ... implement feature ...
+/project:git-pr "Add dark mode toggle and theme switching"
+/project:git-review
+# Comprehensive review with ultrathink analysis
 ```
 
 ### Requirements:
@@ -98,4 +118,7 @@ All issue commands offer to start development sessions:
 
 - `/project:session-help` - Help for session management
 - `/project:session-start` - Start development sessions
-- `/project:session-update` - Track implementation progress 
+- `/project:session-update` - Track implementation progress
+- `/project:git-branch` - Create branches from session context
+- `/project:git-pr` - Create pull requests with AI descriptions
+- `/project:git-review` - Ultrathink PR review process 
